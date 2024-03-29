@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart</title>
+
+<style>
+
+body{
+
+    margin: 0;
+    padding:0;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGa16lHB20jT4d7yaZ96eIY6TEaPBKrije7GK-flg88c19ttQKaHBmOU8hGPcW-79CL4w&usqp=CAU);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    background-position: center;
+
+
+}
+
+.heart{
+
+    height: 150px;
+    width: 150px;
+    position: relative;
+    position: relative;
+    background-color: #f20044;
+    transform: rotate(-45deg);
+    box-shadow:-20px 20px 100px  #f20044 ;
+    animation: blink 0.7s  linear infinite;
+
+}
+
+@keyframes blink{
+    0%{
+        transform: rotate(-45deg) scale(0.5);
+    }
+
+    80%{
+        transform: rotate(-45deg) scale(1.0);
+
+    }
+    100%{
+       transform: rotate(-45deg) scale(0.5);
+}
+}
+
+
+.heart::before{
+    content: "";
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    background-color: #f20044;
+    top: -50%;
+    border-radius: 50%;
+    box-shadow:-20px 20px 100px  #f20044 ;
+
+}
+
+.heart::after{
+    content: "";
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    background-color: #f20044;
+    right:-50%;
+    border-radius: 50%;
+    box-shadow:-20px 20px 100px  #f20044 ;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="heart"></div>
+
+
+</body>
+
+</html>
